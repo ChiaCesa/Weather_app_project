@@ -1,0 +1,165 @@
+body{
+    font-family: hachi maru pop, cursive;    
+}
+.container{
+    border: 1px solid;
+    border-radius: 10px;
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+h1{
+    display: block;
+    font-weight: bolder;
+    font-size:30px ;
+   margin-bottom: 1px;
+}
+em{
+    font-size: 15px;
+    margin-left:-2px;
+}
+h2{
+    display: block;
+    font-size: 20px;
+   
+}
+h3{
+    display: block;
+    font-family: hachi maru pop, cursive;
+    font-size: 30px;
+    font-weight: bolder;
+}
+span{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+   padding: 0 auto;
+}
+a{
+    margin-top: 10px;
+    
+}
+.page{
+    display:block;
+    max-width:700px;
+    margin: auto;
+    margin-top: 20px;
+}
+.actualDegree{
+    display: block;
+   line-height: 50px;
+   
+}
+.degree{
+
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+   text-align: left;
+   margin:0 auto;
+   line-height: 55px;
+}
+
+.temp{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.search-button{
+    display:block;
+    margin-top: 12px;
+    margin-left: 15px;
+    padding:13px;
+    border-radius: 5px;
+}
+
+.current-button{
+    display:block;
+    margin-top:12px;
+    margin-left:5px;
+    padding:13px;
+    border-radius: 5px;
+}
+.fa-cloud{
+    display: block;
+    text-align: center;
+    font-size: 80px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    color:white;
+}
+.fa-cloud-sun{
+    font-size: 50px;
+    text-align: center;
+    color:lightgray;
+    margin:10px;
+}
+.fa-sun{
+    font-size: 50px;
+    text-align: center;
+    color:lightgrey;
+    margin:10px;
+}
+.fa-cloud-rain{
+    font-size: 50px;
+    text-align: center;
+    color:lightgrey;
+    margin:10px;
+}
+
+
+
+.form-floating{
+display:block;
+margin-top: 10px;
+margin-bottom: 10px;
+margin-left: 30px;
+}
+
+
+.location{
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    padding:13px;
+    border-radius: 5px;
+}
+button:hover{
+    cursor:pointer;
+    font-weight: bolder;
+    background-color: white;
+}
+
+/*
+ * Questi li ho aggiunti io :D
+ */
+
+.day-of-the-week {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.city-details {
+    text-align: left;
+    margin-left: 40px;
+}
+
+.city-weather {
+    text-align: right;
+    margin-right: 40px;
+}
+
+
+
+.city-stats{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 22px;
+    text-align: right;
+}
+
+.weather-icon-container {
+    text-align: center; 
+}
+
+.weather-icon {
+    display: inline-block;
+    text-align: center;
+}
