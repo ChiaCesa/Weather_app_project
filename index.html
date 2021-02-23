@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c9f2b7d397.js" crossorigin="anonymous"></script>
+    
+
+</head>
+<body>
+    <div class="page">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-6">
+                <form class="form-floating" id="search-form">
+                    <input type="search" class="form-control"  placeholder="Type a city..." id="cityImput">
+                    <label for="floatingInputValue">Type a city</label>
+                </form>
+            </div>
+            <div class="col-3">
+                <button type="button" class="search-button">Search</button>
+            </div>
+            <div class="col-3">
+                <button class="current-button" id="current-location-button"> current</button>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="city-details">
+                    <h1 id="city">
+                        
+                    </h1>
+                    <h2  id="date"></h2>
+                       
+                    <div class="actualDegree">
+                      
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="weather-icon-container">
+                     <span class="degree" id="temperature"> </span> 
+                      <span><a href="#" id="celsius-link">°C</a> | <a href="#" id="fahrenheit-link">°F</a></span></br>
+                    <i class="fa fa-cloud weather-icon"></i> 
+                   
+                </div>
+            </div>
+            <div class="col">
+                <div class="city-weather">
+                    <h3 id=description> </h3>
+                   <ul class="city-stats">
+                        <li>Humidity: <span id=humidity> </span>%</li>
+                        <li>Wind: <span id=wind> </span> km/h</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="day-of-the-week">
+                    <div>Sun</div>
+                    <div><i class="fas fa-cloud-sun"></i></div>
+                    <div class="temp">9°C</div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="day-of-the-week">
+                    <div>Mon</div>
+                    <div><i class="fas fa-cloud-sun"></i></div>
+                    <div class="temp">8°C</div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="day-of-the-week">
+                    <div>Tue</div>
+                    <div><i class="fas fa-cloud-sun"></i></div>
+                    <div class="temp">7°C</div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="day-of-the-week">
+                    <div>Wed</div>
+                    <div><i class="fas fa-cloud-sun"></i></div>
+                    <div class="temp">7°C</div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="day-of-the-week">
+                    <div>Thu</div>
+                    <div><i class="fas fa-cloud-sun"></i></div>
+                    <div class="temp">7°C</div>
+                </div>
+            </div>
+        </div>
+   
+    </div>
+ </div>
+ <script src="src/script.js"></script>
+</body> 
+</html>
