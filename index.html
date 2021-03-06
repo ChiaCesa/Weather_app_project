@@ -6,6 +6,10 @@
     <title>Document</title>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="src/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -26,10 +30,10 @@
                 </form>
             </div>
             <div class="col-3">
-                <button type="button" class="search-button">Search</button>
+                <button type="button" class="search-button w=100">Search</button>
             </div>
             <div class="col-3">
-                <button class="current-button" id="current-location-button"> current</button>
+                <button class="current-button w=100" id="current-location-button"> current</button>
             </div>
             
         </div>
@@ -49,8 +53,8 @@
             <div class="col">
                 <div class="weather-icon-container">
                      <span class="degree" id="temperature"> </span> 
-                      <span><a href="#" id="celsius-link">°C</a> | <a href="#" id="fahrenheit-link">°F</a></span></br>
-                    <i class="fa fa-cloud weather-icon"></i> 
+                      <span class="celsiusFahrenheit"><a href="#" id="celsius-link">°C</a> | <a href="#" id="fahrenheit-link">°F</a></span></br>
+                    <i class="fa fa-cloud weather-icon animate__animated animate__bounceIn"></i> 
                    
                 </div>
             </div>

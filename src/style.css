@@ -26,6 +26,8 @@ em{
 h2{
     display: block;
     font-size: 20px;
+    line-height: 30px;
+    margin-top: 15px;
    
 }
 h3{
@@ -154,10 +156,9 @@ button:hover{
 
 
 .city-stats{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     list-style-type: none;
     padding: 0;
-    margin-top: 22px;
+    margin-top: 15px;
     text-align: right;
 }
 
@@ -168,4 +169,11 @@ button:hover{
 .weather-icon {
     display: inline-block;
     text-align: center;
+}
+#humidity {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.celsiusFahrenheit{
+   
+     font-size: 15px;
 }
