@@ -25,7 +25,22 @@ function formatDate(date){
     let  dateElement = document.querySelector("#date");
     let currentTime = new Date();
     dateElement.innerHTML = formatDate(currentTime);
+
+    function formatHours(timestamp){
+        let date = new Date(timestamp);
+        let hours = date.getHours();
+        if (hours < 10){
+            hours = `0${hours}`;
+        }
+      let minutes = date.getMinutes();
+        if (minutes < 10){
+            minutes = `0${minutes}`;
+        }
+        return `${hours}:${minutes}`;
+    }
     
+
+
     function displayWeatherCondition(response) {
     document.querySelector("#city").innerHTML = response.data.name;
     document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp);
@@ -40,14 +55,64 @@ function formatDate(date){
     
 function displayForecast(response){
     let forecastElement = document.querySelector("#forecast");
-    let forecast = response.data.list[0];
+    let forecast = null;
     
-
-forecastElement.innerHTML = `
+    for (let index = 0; index <5; index++){
+        forecast = response.data.list[index];
+        forecastElement.innerHTML = `
 <div class="col">
                 <div class="day-of-the-week">
-                    <div>12:00</div>
-                    <div><i class="fas fa-cloud-sun"></i></div>
+                    <div>${formatHours(forecast.dt * 1000)}</div>
+                    <div><img
+                    src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
+                    "></img></div>
+                    <div class="temp">${Math.round(forecast.main.temp_max)}° <span class="temp"> ${Math.round(forecast.main.temp_min)}°</span></div>
+                </div>
+`
+    }
+
+
+forecast = response.data.list[1];
+forecastElement.innerHTML  +=  `
+<div class="col">
+                <div class="day-of-the-week">
+                    <div>${formatHours(forecast.dt * 1000)}</div>
+                    <div><img
+                    src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
+                    "></img></div>
+                    <div class="temp">${Math.round(forecast.main.temp_max)}° <span class="temp"> ${Math.round(forecast.main.temp_min)}°</span></div>
+                </div>
+`
+forecast = response.data.list[2];
+forecastElement.innerHTML  +=  `
+<div class="col">
+                <div class="day-of-the-week">
+                    <div>${formatHours(forecast.dt * 1000)}</div>
+                    <div><img
+                    src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
+                    "></img></div>
+                    <div class="temp">${Math.round(forecast.main.temp_max)}° <span class="temp"> ${Math.round(forecast.main.temp_min)}°</span></div>
+                </div>
+`
+forecast = response.data.list[3];
+forecastElement.innerHTML  +=  `
+<div class="col">
+                <div class="day-of-the-week">
+                    <div>${formatHours(forecast.dt * 1000)}</div>
+                    <div><img
+                    src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
+                    "></img></div>
+                    <div class="temp">${Math.round(forecast.main.temp_max)}° <span class="temp"> ${Math.round(forecast.main.temp_min)}°</span></div>
+                </div>
+`
+forecast = response.data.list[4];
+forecastElement.innerHTML  +=  `
+<div class="col">
+                <div class="day-of-the-week">
+                    <div>${formatHours(forecast.dt * 1000)}</div>
+                    <div><img
+                    src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
+                    "></img></div>
                     <div class="temp">${Math.round(forecast.main.temp_max)}° <span class="temp"> ${Math.round(forecast.main.temp_min)}°</span></div>
                 </div>
 `
