@@ -30,7 +30,7 @@
                 </form>
             </div>
             <div class="col-3">
-                <button type="button" class="search-button w=100">Search</button>
+                <button type="button" class="search-button w=100" id="search-button">Search</button>
             </div>
             <div class="col-3">
                 <button class="current-button w=100" id="current-location-button"> current</button>
@@ -53,8 +53,8 @@
             <div class="col">
                 <div class="weather-icon-container">
                      <span class="degree" id="temperature"> </span> 
-                      <span class="celsiusFahrenheit"><a href="#" id="celsius-link">°C</a> | <a href="#" id="fahrenheit-link">°F</a></span></br>
-                    <i class="fa fa-cloud weather-icon animate__animated animate__bounceIn"></i> 
+                      <span class="celsiusFahrenheit"><a href="#" id="celsius-link" class="active">°C</a> | <a href="#" id="fahrenheit-link">°F</a></span></br>
+                    <img src="" alt="" id=icon class="animate__animated animate__bounceIn"></img> 
                    
                 </div>
             </div>
@@ -68,15 +68,28 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row" id="forecast">
             <div class="col">
                 <div class="day-of-the-week">
-                    <div>Sun</div>
+                    <div>12:00</div>
                     <div><i class="fas fa-cloud-sun"></i></div>
-                    <div class="temp">9°C</div>
+                    <div class="temp">9° <span class="temp"> 7°</span></div>
                 </div>
             </div>
-            <div class="col">
+           
+            </div>
+        </div>
+   
+    </div>
+    <footer> <a href="https://github.com/ChiaCesa/Weather_app_project" target="_blank">Open-source code</a> by Chiara Cesana</footer>
+ </div>
+ <script src="src/script.js"></script>
+</body> 
+</html>
+
+
+
+<div class="col">
                 <div class="day-of-the-week">
                     <div>Mon</div>
                     <div><i class="fas fa-cloud-sun"></i></div>
@@ -103,12 +116,3 @@
                     <div><i class="fas fa-cloud-sun"></i></div>
                     <div class="temp">7°C</div>
                 </div>
-            </div>
-        </div>
-   
-    </div>
-    <footer> <a href="https://github.com/ChiaCesa/Weather_app_project" target="_blank">Open-source code</a> by Chiara Cesana</footer>
- </div>
- <script src="src/script.js"></script>
-</body> 
-</html>

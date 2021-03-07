@@ -32,12 +32,35 @@ function formatDate(date){
     document.querySelector("#humidity").innerHTML = response.data.main.humidity;
     document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
     document.querySelector("#description").innerHTML = response.data.weather[0].main;
-    }
+   
+    let iconElement = document.querySelector("#icon");
+    iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`) ;
+    iconElement.setAttribute("alt", response.data.weather[0].description );
+}
     
+function displayForecast(response){
+    let forecastElement = document.querySelector("#forecast");
+    let forecast = response.data.list[0];
+    
+
+forecastElement.innerHTML = `
+<div class="col">
+                <div class="day-of-the-week">
+                    <div>12:00</div>
+                    <div><i class="fas fa-cloud-sun"></i></div>
+                    <div class="temp">${Math.round(forecast.main.temp_max)}° <span class="temp"> ${Math.round(forecast.main.temp_min)}°</span></div>
+                </div>
+`
+    
+}
+
     function searchCity(city){
         let apiKey = "73f51c65cf902e402e962053834ff472";
         let  apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
         axios.get(apiUrl).then(displayWeatherCondition);
+
+        apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+        axios.get(apiUrl).then(displayForecast);
     }
     
     function handleSubmit(event){
@@ -65,6 +88,10 @@ function formatDate(date){
     function convertToFahrenheit(event){
     event.preventDefault();
     let temperatureElement= document.querySelector("#temperature");
+   
+    celsiusLink.classList.remove("active");
+     fahrenheitLink.classList.add("active");
+
     temperatureElement.innerHTML =  46;
     }
     let fahrenheitLink = document.querySelector("#fahrenheit-link");
@@ -73,6 +100,11 @@ function formatDate(date){
     function convertToCelsius(event){
         event.preventDefault();
         let temperatureElement= document.querySelector("#temperature");
+
+        celsiusLink.classList.add("active");
+        fahrenheitLink.classList.remove("active");
+   
+
         temperatureElement.innerHTML =  8;
         }
     let celsiusLink = document.querySelector("#celsius-link");
@@ -82,3 +114,4 @@ function formatDate(date){
     currentLocationButton.addEventListener("click", getCurrentLocation);
     
     searchCity("New York");
+

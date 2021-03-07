@@ -45,7 +45,15 @@ a{
     margin-top: 10px;
     
 }
-
+.active{
+    color:black;
+    cursor:default;
+    text-decoration: none;
+}
+ .active:hover{
+  text-decoration: none;
+  color:black;
+}
 .page{
     display:block;
     max-width:700px;
@@ -69,6 +77,7 @@ a{
 
 .temp{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
 }
 .search-button{
     display:block;
@@ -76,6 +85,7 @@ a{
     margin-left: 15px;
     padding:13px;
     border-radius: 5px;
+    
 }
 
 .current-button{
@@ -134,6 +144,7 @@ button:hover{
     cursor:pointer;
     font-weight: bolder;
     background-color: white;
+    
 }
 
 
@@ -176,4 +187,5 @@ button:hover{
 .celsiusFahrenheit{
    
      font-size: 15px;
+     text-decoration: none;
 }
