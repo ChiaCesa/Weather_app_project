@@ -7,7 +7,6 @@ function formatDate(date){
       if (minutes < 10){
           minutes = `0${minutes}`;
       }
-    
     let dayIndex = date.getDay();
     let days = [
     "Sunday",
@@ -127,20 +126,19 @@ forecastElement.innerHTML  +=  `
         apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
         axios.get(apiUrl).then(displayForecast);
     }
-    
-    function handleSubmit(event){
-        
-        event.preventDefault();
-    let city = document.querySelector("#cityImput").value;
-    searchCity(city);
-    }
-    
+
     function searchLocation(position){
         let apiKey = "73f51c65cf902e402e962053834ff472";
         let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
         axios.get(apiUrl).then(displayWeatherCondition);
     }
-    
+
+    function handleSubmit(event){
+        event.preventDefault();
+    let city= document.querySelector("#cityImput").value;
+    searchCity(city);
+    }
+
     function getCurrentLocation(event){
         event.preventDefault();
         navigator.geolocation.getCurrentPosition(searchLocation);
