@@ -21,26 +21,22 @@
 <body>
     <div class="page">
     <div class="container">
+        <div class="app-wrapper">
         
-        <div class="row">
-            <div class="col-6">
-                <form class="form-floating" id="search-form">
-                    
+              <form class="form-floating" id="search-form">
+                <div class="row">
+           <div class="col-6">
                     <input type="search" class="form-control "  placeholder="Type a city..." id="cityImput">
-                    <label for="floatingInputValue">Type a city</label>
-                <button type="submit" class="search-button  w=100" id="search-button">Search</button>
-               </form>
+                    <div class="col-3">
+                    <button type="submit" class="search-button  w=100" id="search-button">Search</button>
+                 </div> 
+             </div>
+   
+            <div class="col-6">
+                <button class="current-button w=100" id="current-location-button"> Current</button>
+            </div>
 
-            </div>
-                
-            
-                
-            
-            <div class="col-3">
-                <button class="current-button w=100" id="current-location-button"> current</button>
-            </div>
-            
-        </div>
+           </div>
         <div class="row">
             <div class="col">
                 <div class="city-details">
@@ -82,11 +78,19 @@
             </div>
         </div>
     </div>
-   <footer> <a href="https://github.com/ChiaCesa/Weather_app_project" target="_blank">Open-source code</a> by Chiara Cesana</footer>
+   
  </div>
+ <footer> <a href="https://github.com/ChiaCesa/Weather_app_project" target="_blank">Open-source code</a> by Chiara Cesana</footer>
  <script src="src/script.js"></script>
 </body> 
 </html>
+                    
+                    
+           
+
+             
+           
+        
 
 
 
