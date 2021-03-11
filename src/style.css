@@ -7,6 +7,7 @@ body{
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     background-image: linear-gradient(to top, #ebbba7 0%, #cfc7f8 100%);
+    width: 700px;
 }
 /*linear-gradient(to top, #ebbba7 0%, #cfc7f8 100%);
  linear-gradient(to right, #74ebd5 0%, #9face6 100%);
