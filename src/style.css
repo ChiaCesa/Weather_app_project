@@ -3,7 +3,9 @@ body{
 }
 .container{
     border: 1px solid;
-    border-radius: 10px;
+    border-bottom-color: white;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
     background-image: linear-gradient(to top, #ebbba7 0%, #cfc7f8 100%);
 }
 /*linear-gradient(to top, #ebbba7 0%, #cfc7f8 100%);
@@ -61,6 +63,19 @@ span{
 }
 a{
     margin-top: 10px;
+    
+}
+#cat-image{
+    display:block;
+    margin:0 auto;
+   text-align: center;
+   border-bottom-left-radius: 15px;
+   border-bottom-right-radius: 15px;
+   border: 1px solid;
+   border-color: black;
+   border-top-color: white;
+   box-sizing: 600px;
+   width: 700px;
     
 }
 .active{
