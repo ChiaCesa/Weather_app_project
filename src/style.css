@@ -142,11 +142,15 @@ button:hover{
     background-color: white;
     
 }
-
+.forecastImage{
+    display:block;
+    position: relative;
+    margin-bottom: 10px;
+}
 
 
 .day-of-the-week {
-    text-align: center;
+    display:block;
     margin-bottom: 10px;
 
 }
