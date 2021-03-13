@@ -47,6 +47,8 @@ function formatDate(date){
     document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
     document.querySelector("#description").innerHTML = response.data.weather[0].main;
    
+celsiusTemperature = response.data.main.temp;
+
     let iconElement = document.querySelector("#icon");
     iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`) ;
     iconElement.setAttribute("alt", response.data.weather[0].description );
@@ -156,7 +158,9 @@ forecastElement.innerHTML  +=  `
     celsiusLink.classList.remove("active");
      fahrenheitLink.classList.add("active");
 
-    temperatureElement.innerHTML =  46;
+   let fahrenheitElement = (celsiusTemperature *9)/5+32;
+    temperatureElement.innerHTML = Math.round(fahrenheitElement);
+    
     }
     let fahrenheitLink = document.querySelector("#fahrenheit-link");
     fahrenheitLink.addEventListener("click", convertToFahrenheit);
@@ -169,7 +173,7 @@ forecastElement.innerHTML  +=  `
         fahrenheitLink.classList.remove("active");
    
 
-        temperatureElement.innerHTML =  8;
+        temperatureElement.innerHTML =  Math.round(celsiusTemperature);
         }
     let celsiusLink = document.querySelector("#celsius-link");
     celsiusLink.addEventListener("click", convertToCelsius);
