@@ -146,7 +146,8 @@ forecastElement.innerHTML  +=  `
     
     let searchForm = document.querySelector("#search-form");
     searchForm.addEventListener("submit",  handleSubmit);
-    
+
+
     
     function convertToFahrenheit(event){
     event.preventDefault();
@@ -175,6 +176,6 @@ forecastElement.innerHTML  +=  `
     
     let currentLocationButton = document.querySelector("#current-location-button");
     currentLocationButton.addEventListener("click", getCurrentLocation);
-    
+   
     searchCity("New York");
 

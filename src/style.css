@@ -112,7 +112,7 @@ a{
 .current-button{
     display:block;
    
-    margin-left:170px;
+    margin-left:180px;
     margin-right: 30px;
     padding:5px;
     border-radius: 5px;
@@ -142,16 +142,13 @@ button:hover{
     background-color: white;
     
 }
-.forecastImage{
-    display:block;
-    position: relative;
-    margin-bottom: 10px;
-}
 
 
 .day-of-the-week {
     display:block;
+    text-align: center;
     margin-bottom: 10px;
+    margin-left: -40px;
 
 }
 
@@ -175,6 +172,7 @@ button:hover{
     padding: 0;
     margin-top: 10px;
     text-align: right;
+    line-height: 25px;
 }
 
 .weather-icon-container {
@@ -184,7 +182,7 @@ button:hover{
 #icon {
     display: inline-block;
     text-align: center;
-    margin-top: -20px;
+    margin-top: -30px;
    
 }
 #humidity {
