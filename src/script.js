@@ -144,11 +144,13 @@ forecastElement.innerHTML  +=  `
     function getCurrentLocation(event){
         event.preventDefault();
         navigator.geolocation.getCurrentPosition(searchLocation);
+        
     }
     
     let searchForm = document.querySelector("#search-form");
     searchForm.addEventListener("submit",  handleSubmit);
-
+let currentLocationButton = document.querySelector("#current-location-button");
+    currentLocationButton.addEventListener("click", getCurrentLocation);
 
     
     function convertToFahrenheit(event){
@@ -178,8 +180,7 @@ forecastElement.innerHTML  +=  `
     let celsiusLink = document.querySelector("#celsius-link");
     celsiusLink.addEventListener("click", convertToCelsius);
     
-    let currentLocationButton = document.querySelector("#current-location-button");
-    currentLocationButton.addEventListener("click", getCurrentLocation);
+    
    
     searchCity("New York");
 
