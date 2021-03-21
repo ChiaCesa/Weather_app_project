@@ -46,6 +46,7 @@ function formatDate(date){
     document.querySelector("#humidity").innerHTML = response.data.main.humidity;
     document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
     document.querySelector("#description").innerHTML = response.data.weather[0].main;
+    
    
 celsiusTemperature = response.data.main.temp;
 
@@ -132,7 +133,10 @@ forecastElement.innerHTML  +=  `
     function searchLocation(position){
         let apiKey = "73f51c65cf902e402e962053834ff472";
         let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+        
         axios.get(apiUrl).then(displayWeatherCondition);
+        apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+        axios.get(apiUrl).then(displayForecast);
     }
 
     function handleSubmit(event){
@@ -144,13 +148,10 @@ forecastElement.innerHTML  +=  `
     function getCurrentLocation(event){
         event.preventDefault();
         navigator.geolocation.getCurrentPosition(searchLocation);
-        
     }
-    
-    let searchForm = document.querySelector("#search-form");
-    searchForm.addEventListener("submit",  handleSubmit);
-let currentLocationButton = document.querySelector("#current-location-button");
+    let currentLocationButton = document.querySelector("#current-location-button");
     currentLocationButton.addEventListener("click", getCurrentLocation);
+    
 
     
     function convertToFahrenheit(event){
@@ -180,7 +181,9 @@ let currentLocationButton = document.querySelector("#current-location-button");
     let celsiusLink = document.querySelector("#celsius-link");
     celsiusLink.addEventListener("click", convertToCelsius);
     
-    
+    let searchForm = document.querySelector("#search-form");
+    searchForm.addEventListener("submit",  handleSubmit);
+
    
     searchCity("New York");
 
